@@ -6,10 +6,15 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'google/map_script' %>
+    <%= render 'navigation/header' %>
+    <div class="container-fluid">
+      <%= yield %>
+    </div>
   </body>
 </html>

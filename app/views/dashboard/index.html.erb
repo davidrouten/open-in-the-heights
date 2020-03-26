@@ -1,0 +1,52 @@
+<div class="row" style="margin-top:40px;">
+  <div class="col-md-2"></div>
+  <div class="col-md-8" style="height:640px;">
+    <div id="map"></div>
+  </div>
+  <div class="col-md-2"></div>
+</div>
+
+<script type="text/javascript">
+  function initMap() {
+    var centerLocation = {lat: 28.0007, lng: -82.4548};
+
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: centerLocation,
+      zoom: 14
+    });
+
+    // var markers = locations.map(function(location, i) {
+    //   return new google.maps.Marker({
+    //     position: location,
+    //     label: 'Tester'
+    //   });
+    // });
+
+    var markers = locations.map(function(restaurant, i) {
+      return new google.maps.Marker({
+        position: restaurant['location'],
+        map: map,
+        label: restaurant['name']
+      })
+    });
+  }
+
+  var locations = [
+    {name: 'test', location: {lat: 28.0020, lng: -82.4558}},
+    {name: 'Ellas', location: {lat: 27.9935829, lng: -82.4531083}},
+  ]
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV.fetch('GOOGLE_MAPS_API_KEY') %>&callback=initMap"
+    async defer></script>
+
+<style>
+  #map {
+    height: 100%;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+</style>
