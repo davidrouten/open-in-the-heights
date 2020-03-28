@@ -1,5 +1,5 @@
 class Api::SearchController < ApplicationController
-  def show
-    render json: {term: params[:id]}
+  def index
+    render json: Location.where("LOWER(name) ILIKE ?", "%#{params[:term].to_s}%")
   end
 end

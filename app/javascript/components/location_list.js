@@ -11,9 +11,9 @@ export default class LocationList extends React.Component {
   }
 
   searchLocations(term) {
-    axios.get(`/api/search/${term}`)
+    axios.get(`/api/search?term=${term}`)
       .then(response => {
-        console.log(response.data)
+        this.setState({list: response.data})
       })
       .catch(error => {
         console.log(error)
@@ -25,6 +25,11 @@ export default class LocationList extends React.Component {
       <>
         <input className="form-control" onChange={event => this.searchLocations(event.target.value)}></input>
         <h1 className="text-center">Locations</h1>
+        <div>
+          {this.state.list.map((location, index) => {
+            return <div key={index}>{location['name']}</div>
+          })}
+        </div>
       </>
     )
   }
