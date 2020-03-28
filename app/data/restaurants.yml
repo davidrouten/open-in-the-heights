@@ -1,0 +1,8 @@
+- name: Ella’s Americana Folk Art Cafe
+  description:
+  address_lat: 27.9935829
+  address_lng: -82.4531083
+- name: Independent Cafe
+  description:
+  address_lat: 27.9920
+  address_lng: -82.4596

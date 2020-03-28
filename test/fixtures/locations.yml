@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  contact_name: MyString
+  contact_email: MyString
+  contact_phone: MyString
+  contact_fax: MyString
+  link_facebook: MyString
+  link_twitter: MyString
+  link_instagram: MyString
+  link_website: MyString
+  link_menu: MyString
+  address_lat: MyString
+  address_lng: MyString
+  address_street: MyString
+  address_street2: MyString
+  address_city: MyString
+  address_state: MyString
+  address_zip: MyString
+  drive_through_drive_up: false
+  takeout: false
+  delivery: false
+  open: false
+  visible: false
+
+two:
+  name: MyString
+  description: MyText
+  contact_name: MyString
+  contact_email: MyString
+  contact_phone: MyString
+  contact_fax: MyString
+  link_facebook: MyString
+  link_twitter: MyString
+  link_instagram: MyString
+  link_website: MyString
+  link_menu: MyString
+  address_lat: MyString
+  address_lng: MyString
+  address_street: MyString
+  address_street2: MyString
+  address_city: MyString
+  address_state: MyString
+  address_zip: MyString
+  drive_through_drive_up: false
+  takeout: false
+  delivery: false
+  open: false
+  visible: false
