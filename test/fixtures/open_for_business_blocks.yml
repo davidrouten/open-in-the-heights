@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: one
+  name: MyString
+  day_of_week: MyString
+  day_of_week_index: 1
+  opens_at: 2020-03-28 18:31:04
+  closes_at: 2020-03-28 18:31:04
+
+two:
+  location: two
+  name: MyString
+  day_of_week: MyString
+  day_of_week_index: 1
+  opens_at: 2020-03-28 18:31:04
+  closes_at: 2020-03-28 18:31:04
