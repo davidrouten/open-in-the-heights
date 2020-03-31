@@ -1,6 +1,8 @@
 - name: Ella’s Americana Folk Art Cafe
   description:
+  notes:
   tooltip:
+  business_type: Food & Alcohol
   contact_name:
   contact_email:
   contact_phone: (813) 234-1000
@@ -17,7 +19,7 @@
   link_website: https://www.ellasfolkartcafe.com/
   link_menu: https://ellasfolkartcafe.com/Ellastakeoutmenu.pdf
   drive_through_drive_up: false
-  takeout: false
+  takeout: true
   delivery: false
   open: true
   open_hours: |
@@ -26,7 +28,9 @@
     Wednesday: 8am - 9pm<br/>
 - name: Independent Cafe
   description:
+  notes:
   tooltip:
+  business_type: Food & Alcohol
   contact_name:
   contact_email: independentbeer@gmail.com
   contact_phone: (813) 341-4883
@@ -43,7 +47,42 @@
   link_website: https://independentbartampa.com/
   link_menu: https://independentbartampa.com/menu/
   drive_through_drive_up: false
-  takeout: false
+  takeout: true
   delivery: false
   open: true
   open_hours:
+- name: Front Porch & Barts Tavern
+  description: Free glass of red sangria with orders of $35 or more
+  notes: Delivery w/in 3 miles, Postmates, HCBB
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email:
+  contact_phone: (813) 237-5511
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 5924 N Florida Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33604
+  link_facebook: https://www.facebook.com/FrontPorchandBartsTavern
+  link_twitter:
+  link_instagram:
+  link_website: www.frontporchgrill.com
+  link_menu:
+  drive_through_drive_up: true
+  takeout: true
+  delivery: true
+  open: true
+  open_hours: |
+    Monday: 16:00 - 22:00<br/>
+    Tuesday: 16:00 - 22:00<br/>
+    Wednesday: 16:00 - 22:00<br/>
+    Thursday: 16:00 - 22:00<br/>
+    Friday: 16:00 - 22:00<br/>
+    Saturday: 12:00 - 22:00<br/>
+    Sunday: 12:00 - 22:00<br/>
+
+
+
