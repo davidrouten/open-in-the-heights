@@ -1,5 +1,5 @@
 import React from 'react'
-import { Map, Marker, GoogleApiWrapper } from 'google-maps-react'
+import { Map, Marker, InfoWindow, GoogleApiWrapper } from 'google-maps-react'
 import axios from 'axios'
 
 const mapStyle = {
@@ -21,6 +21,12 @@ export class MapContainer extends React.Component {
     }
   }
 
+  onMarkerClick = (props, marker, e) => {
+    this.props.setLocation(props.id)
+    this.props.setMarker(marker)
+  }
+
+
   render() {
     return (
       <Map
@@ -30,12 +36,18 @@ export class MapContainer extends React.Component {
         containerStyle={containerStyle}
         initialCenter={this.state.centerLocation}
       >
+        <InfoWindow
+          marker={this.props.currentMarker}
+          visible={Boolean(this.props.currentMarker)}>
+            <div>{this.props.currentLocation['name']}</div>
+        </InfoWindow>
         {this.props.locations.map((location, index) => {
           return <Marker
+                   id={location['id']}
                    title={location['name']}
                    name={location['name']}
                    position={location['coords']}
-                   onClick={() => this.props.setLocation(location['id'])}
+                   onClick={this.onMarkerClick}
                    key={index}
                  />
         })}

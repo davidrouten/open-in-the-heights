@@ -4,7 +4,7 @@ export const Location = (props) => {
   return (
     <>
       <div>
-        <button className="btn btn-primary" style={{ marginBottom: '15px' }} onClick={() => props.clearCurrentLocation()}>Back</button>
+        <button className="btn btn-primary" style={{ marginBottom: '15px' }} onClick={props.clearCurrentLocation}>Back</button>
       </div>
       <div className="card border-secondary mb-3">
         <div className="card-header">

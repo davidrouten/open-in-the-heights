@@ -10,9 +10,11 @@ export class App extends React.Component {
     super(props)
     this.state = {
       locations: [],
+      currentMarker: null,
       currentLocation: {}
     }
     this.setLocation = this.setLocation.bind(this)
+    this.setMarker = this.setMarker.bind(this)
     this.clearCurrentLocation = this.clearCurrentLocation.bind(this)
 
     this.fetchLocations()
@@ -32,8 +34,15 @@ export class App extends React.Component {
     this.setState({currentLocation: this.state.locations.find(location => location['id'] === id)})
   }
 
+  setMarker(marker) {
+    this.setState({currentMarker: marker})
+  }
+
   clearCurrentLocation() {
-    this.setState({currentLocation: {}})
+    this.setState({
+      currentLocation: {},
+      currentMarker: null
+    })
   }
 
   render() {
@@ -41,7 +50,13 @@ export class App extends React.Component {
       <div className="row" style={ { marginTop: '40px' } }>
         <div className="col-md-1"></div>
         <div className="col-md-6" style={ { minHeight: '640px' } }>
-          <MapContainer locations={this.state.locations} setLocation={this.setLocation}/>
+          <MapContainer
+            locations={this.state.locations}
+            currentLocation={this.state.currentLocation}
+            currentMarker={this.state.currentMarker}
+            setLocation={this.setLocation}
+            setMarker={this.setMarker}
+          />
         </div>
         <div className="col-md-4">
           {(Object.keys(this.state.currentLocation).length === 0 && this.state.currentLocation.constructor === Object) ? (
