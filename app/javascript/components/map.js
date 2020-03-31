@@ -30,7 +30,7 @@ export class MapContainer extends React.Component {
         containerStyle={containerStyle}
         initialCenter={this.state.centerLocation}
       >
-        {this.props.locations.sort().map((location, index) => {
+        {this.props.locations.map((location, index) => {
           return <Marker
                    title={location['name']}
                    name={location['name']}
