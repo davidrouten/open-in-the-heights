@@ -1,7 +1,10 @@
 - name: Ella’s Americana Folk Art Cafe
   description:
+  tooltip:
+  contact_name:
   contact_email:
   contact_phone: (813) 234-1000
+  contact_fax:
   address_lat: 27.9935829
   address_lng: -82.4531083
   address_street: 5119 N Nebraska Ave
@@ -13,10 +16,21 @@
   link_instagram: https://www.instagram.com/ellasfolkartcafe/?hl=en
   link_website: https://www.ellasfolkartcafe.com/
   link_menu: https://ellasfolkartcafe.com/Ellastakeoutmenu.pdf
+  drive_through_drive_up: false
+  takeout: false
+  delivery: false
+  open: true
+  open_hours: |
+    Monday: 8am - 5pm<br/>
+    Tuesday: closed<br/>
+    Wednesday: 8am - 9pm<br/>
 - name: Independent Cafe
   description:
+  tooltip:
+  contact_name:
   contact_email: independentbeer@gmail.com
   contact_phone: (813) 341-4883
+  contact_fax:
   address_lat: 27.9920
   address_lng: -82.4596
   address_street: 5016 N Florida Ave
@@ -28,3 +42,8 @@
   link_instagram: https://www.instagram.com/indieseminoleheights/
   link_website: https://independentbartampa.com/
   link_menu: https://independentbartampa.com/menu/
+  drive_through_drive_up: false
+  takeout: false
+  delivery: false
+  open: true
+  open_hours:

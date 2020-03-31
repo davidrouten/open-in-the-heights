@@ -1,5 +1,6 @@
 class LocationSerializer < ActiveModel::Serializer
-  attributes :id, :name, :tooltip, :description, :contact_phone, :contact_email, :is_open, :is_closing_soon, :coords, :address, :hours, :links
+  attributes :id, :name, :tooltip, :description, :contact_phone, :contact_email,
+    :open_hours, :is_open, :is_closing_soon, :coords, :address, :links
 
   def is_open
     true
@@ -21,10 +22,6 @@ class LocationSerializer < ActiveModel::Serializer
       state: object.address_state,
       zip: object.address_zip
     }
-  end
-
-  def hours
-    ['Mon 10am - 5pm','Tue 10am - 5pm','Wed 10am - 5pm']
   end
 
   def links

@@ -43,10 +43,7 @@ export const Location = (props) => {
           <hr/>
 
           <h5 className="card-title">Hours</h5>
-          <div className="card-text">
-            {props.data.hours.map((block, index) => {
-              return <div key={index}>{block}</div>
-            })}
+          <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.open_hours }}>
           </div>
         </div>
       </div>
