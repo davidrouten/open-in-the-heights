@@ -1,8 +1,30 @@
 - name: Ella’s Americana Folk Art Cafe
   description:
+  contact_email:
+  contact_phone: (813) 234-1000
   address_lat: 27.9935829
   address_lng: -82.4531083
+  address_street: 5119 N Nebraska Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33603
+  link_facebook: https://www.facebook.com/ellasfolkartcafe/
+  link_twitter:
+  link_instagram: https://www.instagram.com/ellasfolkartcafe/?hl=en
+  link_website: https://www.ellasfolkartcafe.com/
+  link_menu: https://ellasfolkartcafe.com/Ellastakeoutmenu.pdf
 - name: Independent Cafe
   description:
+  contact_email: independentbeer@gmail.com
+  contact_phone: (813) 341-4883
   address_lat: 27.9920
   address_lng: -82.4596
+  address_street: 5016 N Florida Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33603
+  link_facebook: https://www.facebook.com/IndependentBarTampa/
+  link_twitter: https://mobile.twitter.com/independent_bar
+  link_instagram: https://www.instagram.com/indieseminoleheights/
+  link_website: https://independentbartampa.com/
+  link_menu: https://independentbartampa.com/menu/

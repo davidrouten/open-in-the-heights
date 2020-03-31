@@ -10,7 +10,8 @@
 locations = YAML.load_file(Rails.root.join('app', 'data', 'restaurants.yml'))
 
 locations.each do |location|
-  l = Location.find_or_initialize_by(location)
+  l = Location.find_by(name: location['name']) || Location.new
+  l.assign_attributes(location)
   l.drive_through_drive_up = false if l.drive_through_drive_up.nil?
   l.takeout = false if l.takeout.nil?
   l.delivery = false if l.delivery.nil?

@@ -8,6 +8,7 @@ export default class LocationList extends React.Component {
       list: []
     }
     this.searchLocations = this.searchLocations.bind(this)
+    this.searchLocations('')
   }
 
   searchLocations(term) {
@@ -23,11 +24,19 @@ export default class LocationList extends React.Component {
   render() {
     return (
       <>
-        <input className="form-control" onChange={event => this.searchLocations(event.target.value)}></input>
+        <input className="form-control" onChange={event => this.searchLocations(event.target.value)} placeholder="Search..."></input>
         <h1 className="text-center">Locations</h1>
-        <div>
+        <div className="list-group">
           {this.state.list.map((location, index) => {
-            return <div key={index}>{location['name']}</div>
+            return (
+              <button
+                key={index}
+                onClick={() => this.props.setLocation(location['id'])}
+                className="list-group-item list-group-item-action"
+              >
+                {location['name']}
+              </button>
+            )
           })}
         </div>
       </>

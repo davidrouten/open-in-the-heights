@@ -17,21 +17,8 @@ export class MapContainer extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      centerLocation: {lat: 28.0007, lng: -82.4548},
-      currentLocation: {},
-      locations: []
+      centerLocation: {lat: 28.0007, lng: -82.4548}
     }
-    this.fetchLocations = this.fetchLocations.bind(this)
-  }
-
-  fetchLocations() {
-    axios.get('/api/locations')
-      .then(response => {
-        this.setState({locations: response.data})
-      })
-      .catch(error => {
-        console.log(error)
-      })
   }
 
   render() {
@@ -42,9 +29,8 @@ export class MapContainer extends React.Component {
         style={mapStyle}
         containerStyle={containerStyle}
         initialCenter={this.state.centerLocation}
-        onReady={this.fetchLocations}
       >
-        {this.state.locations.map((location, index) => {
+        {this.props.locations.sort().map((location, index) => {
           return <Marker
                    title={location['name']}
                    name={location['name']}
