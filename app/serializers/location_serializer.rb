@@ -1,6 +1,6 @@
 class LocationSerializer < ActiveModel::Serializer
-  attributes :id, :name, :tooltip, :description, :contact_phone, :contact_email,
-    :open_hours, :is_open, :is_closing_soon, :coords, :address, :links
+  attributes :id, :name, :tooltip, :description, :business_type, :contact_phone,
+    :contact_email, :open_hours, :is_open, :is_closing_soon, :coords, :address, :links
 
   def is_open
     true

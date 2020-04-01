@@ -60,7 +60,7 @@ export class App extends React.Component {
         </div>
         <div className="col-md-4">
           {(Object.keys(this.state.currentLocation).length === 0 && this.state.currentLocation.constructor === Object) ? (
-            <LocationList setLocation={this.setLocation} />
+            <LocationList locations={this.state.locations} setLocation={this.setLocation} />
           ) : (
             <Location data={this.state.currentLocation} clearCurrentLocation={this.clearCurrentLocation} />
           )}

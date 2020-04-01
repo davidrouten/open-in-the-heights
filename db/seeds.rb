@@ -12,7 +12,7 @@ def get_coords(location)
   { lat: results.lat, lng: results.lng }
 end
 
-locations = YAML.load_file(Rails.root.join('app', 'data', 'restaurants.yml'))
+locations = YAML.load_file(Rails.root.join('app', 'data', 'locations.yml'))
 
 locations.each do |location|
   l = Location.find_by(name: location['name']) || Location.new
