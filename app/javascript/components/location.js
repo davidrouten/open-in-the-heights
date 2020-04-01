@@ -43,8 +43,27 @@ export const Location = (props) => {
           <hr/>
 
           <h5 className="card-title">Hours</h5>
-          <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.open_hours }}>
-          </div>
+          <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.open_hours }}></div>
+          <hr/>
+
+          {props.data.delivery_notes ? (
+            <>
+              <h5 className="card-title">Delivery Notes</h5>
+              <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.delivery_notes }}></div>
+              <hr/>
+            </>
+          ) : (
+            null
+          )}
+
+          {props.data.notes ? (
+            <>
+              <h5 className="card-title">Notes</h5>
+              <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.notes }}></div>
+            </>
+          ) : (
+            null
+          )}
         </div>
       </div>
     </>

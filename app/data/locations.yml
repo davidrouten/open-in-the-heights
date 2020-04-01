@@ -1,14 +1,15 @@
 - name: Ella’s Americana Folk Art Cafe
   description:
-  notes: Delivery w/in 3 miles, Postmates, HCBB
+  delivery_notes:
+  notes:
   tooltip:
   business_type: Food & Alcohol
   contact_name:
   contact_email:
   contact_phone: (813) 234-1000
   contact_fax:
-  address_lat: 27.993641
-  address_lng: -82.45091
+  address_lat:
+  address_lng:
   address_street: 5119 N Nebraska Ave
   address_city: Tampa
   address_state: FL
@@ -23,20 +24,25 @@
   delivery: false
   open: true
   open_hours: |
-    Monday: 8am - 5pm<br/>
-    Tuesday: closed<br/>
-    Wednesday: 8am - 9pm<br/>
+    Monday: closed<br/>
+    Tuesday: 17:00-22:00<br/>
+    Wednesday: 17:00-22:00<br/>
+    Thursday: 11:00-22:00<br/>
+    Friday: 11:00-22:00<br/>
+    Saturday: 11:00-22:00<br/>
+    Sunday: 11:00-20:00<br/>
 - name: The Independent Bar & Cafe
   description:
-  notes:
+  delivery_notes: Local delivery
+  notes: Alternating nights offering family dinners. Check facebook for info
   tooltip:
   business_type: Food & Alcohol
   contact_name:
   contact_email: independentbeer@gmail.com
   contact_phone: (813) 341-4883
   contact_fax:
-  address_lat: 27.99205
-  address_lng: -82.459615
+  address_lat:
+  address_lng:
   address_street: 5016 N Florida Ave
   address_city: Tampa
   address_state: FL
@@ -48,12 +54,13 @@
   link_menu: https://independentbartampa.com/menu/
   drive_through_drive_up: false
   takeout: true
-  delivery: false
+  delivery: true
   open: true
   open_hours:
 - name: Front Porch & Barts Tavern
-  description: Free glass of red sangria with orders of $35 or more
-  notes: Delivery w/in 3 miles, Postmates, HCBB
+  description:
+  delivery_notes: Delivery w/in 3 miles, Postmates, HCBB
+  notes: Free glass of red sangria with orders of $35 or more
   tooltip:
   business_type: Food & Alcohol
   contact_name:
@@ -71,7 +78,7 @@
   link_instagram:
   link_website: www.frontporchgrill.com
   link_menu:
-  drive_through_drive_up: true
+  drive_through_drive_up: false
   takeout: true
   delivery: true
   open: true

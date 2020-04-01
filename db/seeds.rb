@@ -25,8 +25,8 @@ locations.each do |location|
   l.visible = true if l.visible.nil?
 
   coords = get_coords(location)
-  l.address_lat = coords[:lat]
-  l.address_lng = coords[:lng]
+  l.address_lat = coords[:lat] unless l.address_lat
+  l.address_lng = coords[:lng] unless l.address_lng
 
   l.save
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_31_214112) do
+ActiveRecord::Schema.define(version: 2020_04_01_215754) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,8 @@ ActiveRecord::Schema.define(version: 2020_03_31_214112) do
     t.text "open_hours"
     t.string "business_type"
     t.text "notes"
+    t.text "delivery_notes"
+    t.string "keywords"
   end
 
   create_table "open_for_business_blocks", force: :cascade do |t|
