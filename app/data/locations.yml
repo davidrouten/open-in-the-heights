@@ -1,4 +1,4 @@
-- name: Ella’s Americana Folk Art Cafe
+- name: Ella's Americana Folk Art Cafe
   description:
   delivery_notes:
   notes:
@@ -23,14 +23,14 @@
   takeout: true
   delivery: false
   open: true
-  open_hours: |
-    Monday: closed<br/>
-    Tuesday: 17:00-22:00<br/>
-    Wednesday: 17:00-22:00<br/>
-    Thursday: 11:00-22:00<br/>
-    Friday: 11:00-22:00<br/>
-    Saturday: 11:00-22:00<br/>
-    Sunday: 11:00-20:00<br/>
+  open_hours:
+  hours_monday: closed
+  hours_tuesday: 5:00pm-10:00pm
+  hours_wednesday: 5:00pm-10:00pm
+  hours_thursday: 11:00am-10:00pm
+  hours_friday: 11:00am-10:00pm
+  hours_saturday: 11:00am-10:00pm
+  hours_sunday: 11:00am-8:00pm
 - name: The Independent Bar & Cafe
   description:
   delivery_notes: Local delivery
@@ -57,6 +57,13 @@
   delivery: true
   open: true
   open_hours:
+  hours_monday:
+  hours_tuesday:
+  hours_wednesday:
+  hours_thursday:
+  hours_friday:
+  hours_saturday:
+  hours_sunday:
 - name: Front Porch & Barts Tavern
   description:
   delivery_notes: Delivery w/in 3 miles, Postmates, HCBB
@@ -82,14 +89,14 @@
   takeout: true
   delivery: true
   open: true
-  open_hours: |
-    Monday: 16:00 - 22:00<br/>
-    Tuesday: 16:00 - 22:00<br/>
-    Wednesday: 16:00 - 22:00<br/>
-    Thursday: 16:00 - 22:00<br/>
-    Friday: 16:00 - 22:00<br/>
-    Saturday: 12:00 - 22:00<br/>
-    Sunday: 12:00 - 22:00<br/>
+  open_hours:
+  hours_monday: 4:00pm-10:00pm
+  hours_tuesday: 4:00pm-10:00pm
+  hours_wednesday: 4:00pm-10:00pm
+  hours_thursday: 4:00pm-10:00pm
+  hours_friday: 4:00pm-10:00pm
+  hours_saturday: 12:00pm-10:00pm
+  hours_sunday: 12:00pm-10:00pm
 
 
 

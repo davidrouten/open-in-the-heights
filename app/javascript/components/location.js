@@ -1,4 +1,5 @@
 import React from 'react'
+import { capitalize } from './utils'
 
 export const Location = (props) => {
   return (
@@ -43,7 +44,11 @@ export const Location = (props) => {
           <hr/>
 
           <h5 className="card-title">Hours</h5>
-          <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.open_hours }}></div>
+          <div className="card-text">
+            {['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(day => {
+              return <div key={day}><strong>{capitalize(day)}:</strong> {props.data.hours[day]}</div>
+            })}
+          </div>
           <hr/>
 
           {props.data.delivery_notes ? (

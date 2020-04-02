@@ -1,7 +1,7 @@
 class LocationSerializer < ActiveModel::Serializer
   attributes :id, :name, :tooltip, :description, :notes, :delivery_notes,
     :business_type, :contact_phone, :contact_email, :open_hours, :is_open,
-    :is_closing_soon, :coords, :address, :links
+    :is_closing_soon, :coords, :address, :hours, :links
 
   def is_open
     true
@@ -22,6 +22,18 @@ class LocationSerializer < ActiveModel::Serializer
       city: object.address_city,
       state: object.address_state,
       zip: object.address_zip
+    }
+  end
+
+  def hours
+    {
+      monday: object.hours_monday,
+      tuesday: object.hours_tuesday,
+      wednesday: object.hours_wednesday,
+      thursday: object.hours_thursday,
+      friday: object.hours_friday,
+      saturday: object.hours_saturday,
+      sunday: object.hours_sunday
     }
   end
 
