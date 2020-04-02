@@ -7,7 +7,10 @@ export default class LocationList extends React.Component {
     this.state = {
       list: [],
       searchTerm: '',
-      businessType: ''
+      businessType: '',
+      driveThroughDriveUp: false,
+      takeout: false,
+      delivery: false,
     }
     this.searchLocations = this.searchLocations.bind(this)
     this.searchLocations('')
@@ -34,11 +37,27 @@ export default class LocationList extends React.Component {
       params.push(['business_type', encodeURIComponent(this.state.businessType)])
     }
 
+    if (this.state.driveThroughDriveUp) {
+      params.push(['drive_through_drive_up', this.state.driveThroughDriveUp])
+    }
+
+    if (this.state.takeout) {
+      params.push(['takeout', this.state.takeout])
+    }
+
+    if (this.state.delivery) {
+      params.push(['delivery', this.state.delivery])
+    }
+
     return params.map(row => `${row[0]}=${row[1]}`).join('&')
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (this.state.searchTerm !== prevState.searchTerm || this.state.businessType != prevState.businessType) {
+    if (this.state.searchTerm !== prevState.searchTerm ||
+        this.state.businessType !== prevState.businessType ||
+        this.state.driveThroughDriveUp !== prevState.driveThroughDriveUp ||
+        this.state.takeout !== prevState.takeout ||
+        this.state.delivery !== prevState.delivery) {
       this.searchLocations()
     }
   }
@@ -57,36 +76,70 @@ export default class LocationList extends React.Component {
           placeholder="Search..."
         />
         <hr/>
-        <h5>Type of Business</h5>
-        <div>
-          <div key="-1" className="form-check">
-            <label className="form-check-label">
-              <input
-                name="business-types"
-                type="radio"
-                value=""
-                onClick={(event) => this.setState({businessType: ""})}
-                className="form-check-input"
-              />
-              &nbsp;all
-            </label>
-          </div>
-          {this.uniqueBusinessTypes().map((business_type, index) => {
-            return (
-              <div key={index} className="form-check">
+        <div className="row">
+          <div className="col-md-6">
+            <h5>Type of Business</h5>
+            <div>
+              <div key="-1" className="form-check">
                 <label className="form-check-label">
                   <input
                     name="business-types"
                     type="radio"
-                    value={business_type}
-                    onClick={(event) => this.setState({businessType: event.target.value})}
+                    value=""
+                    onClick={event => this.setState({businessType: ""})}
                     className="form-check-input"
                   />
-                 &nbsp;{business_type}
+                  &nbsp;all
                 </label>
               </div>
-            )
-          })}
+              {this.uniqueBusinessTypes().map((business_type, index) => {
+                return (
+                  <div key={index} className="form-check">
+                    <label className="form-check-label">
+                      <input
+                        name="business-types"
+                        type="radio"
+                        value={business_type}
+                        onClick={event => this.setState({businessType: event.target.value})}
+                        className="form-check-input"
+                      />
+                     &nbsp;{business_type}
+                    </label>
+                  </div>
+                )
+              })}
+            </div>
+          </div>
+          <div className="col-md-6">
+            <h5>Delivery Options</h5>
+            <div key="driveThroughDriveUp">
+              <label className="form-check-label">
+                <input
+                  type="checkbox"
+                  onClick={event => this.setState({driveThroughDriveUp: event.target.checked})}
+                />
+                &nbsp;Drive Through / Drive Up
+              </label>
+            </div>
+            <div key="takeout">
+              <label className="form-check-label">
+                <input
+                  type="checkbox"
+                  onClick={event => this.setState({takeout: event.target.checked})}
+                />
+                &nbsp;Takeout
+              </label>
+            </div>
+            <div key="delivery">
+              <label className="form-check-label">
+                <input
+                  type="checkbox"
+                  onClick={event => this.setState({delivery: event.target.checked})}
+                />
+                &nbsp;Delivery
+              </label>
+            </div>
+          </div>
         </div>
         <h1 className="text-center">Locations</h1>
         <div className="list-group">

@@ -16,6 +16,18 @@ class Api::SearchController < ApplicationController
       locations = locations.where(business_type: URI.decode(params[:business_type])) if params[:business_type]
     end
 
+    if params[:drive_through_drive_up].present?
+      locations = locations.where(drive_through_drive_up: true)
+    end
+
+    if params[:takeout].present?
+      locations = locations.where(takeout: true)
+    end
+
+    if params[:delivery].present?
+      locations = locations.where(delivery: true)
+    end
+
     render json: locations
   end
 end
