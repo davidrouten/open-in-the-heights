@@ -1,5 +1,7 @@
 import React from 'react'
 import axios from 'axios'
+import { Icon } from './icon'
+import { capitalize, getDayOfWeek, buildAddress } from './utils'
 
 export default class LocationList extends React.Component {
   constructor(props) {
@@ -11,6 +13,7 @@ export default class LocationList extends React.Component {
       driveThroughDriveUp: false,
       takeout: false,
       delivery: false,
+      currentDayOfWeek: getDayOfWeek(new Date()),
     }
     this.searchLocations = this.searchLocations.bind(this)
     this.searchLocations('')
@@ -50,6 +53,13 @@ export default class LocationList extends React.Component {
     }
 
     return params.map(row => `${row[0]}=${row[1]}`).join('&')
+  }
+
+  buildCurrentDayHours(location) {
+    var hours = location['hours'][this.state.currentDayOfWeek]
+    if (!hours) return null
+
+    return `${capitalize(this.state.currentDayOfWeek)}: ${hours}`
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -149,9 +159,14 @@ export default class LocationList extends React.Component {
               <button
                 key={index}
                 onClick={() => this.props.setLocation(location['id'])}
-                className="list-group-item list-group-item-action"
+                className="list-group-item py-2 px-2 list-group-item-action"
               >
-                {location['name']}
+                <div className="d-flex w-100 justify-content-between">
+                  <h5 className="mb-1">{location['name']}</h5>
+                  <small></small>
+                </div>
+                <p className="mb-1"><Icon name="clock"/>&nbsp;{this.buildCurrentDayHours(location)}</p>
+                <small>{buildAddress(location['address'])}</small>
               </button>
             )
           })}

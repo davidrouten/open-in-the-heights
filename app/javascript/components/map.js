@@ -26,7 +26,6 @@ export class MapContainer extends React.Component {
     this.props.setMarker(marker)
   }
 
-
   render() {
     return (
       <Map
