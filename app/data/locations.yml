@@ -1,7 +1,7 @@
 - name: Ella's Americana Folk Art Cafe
   description:
-  delivery_notes:
-  notes:
+  delivery_notes: UberEats, HCBB, GrubHub
+  notes: Offering weekly specials - call or check online
   tooltip:
   business_type: Food & Alcohol
   contact_name:
@@ -21,7 +21,7 @@
   link_menu: https://ellasfolkartcafe.com/Ellastakeoutmenu.pdf
   drive_through_drive_up: false
   takeout: true
-  delivery: false
+  delivery: true
   open: true
   open_hours:
   hours_monday: closed
@@ -52,18 +52,18 @@
   link_instagram: https://www.instagram.com/indieseminoleheights/
   link_website: https://independentbartampa.com/
   link_menu: https://independentbartampa.com/menu/
-  drive_through_drive_up: false
+  drive_through_drive_up: true
   takeout: true
   delivery: true
   open: true
   open_hours:
-  hours_monday:
-  hours_tuesday:
-  hours_wednesday:
-  hours_thursday:
-  hours_friday:
-  hours_saturday:
-  hours_sunday:
+  hours_monday: 4:00pm-9:00pm
+  hours_tuesday: 4:00pm-9:00pm
+  hours_wednesday: 4:00pm-9:00pm
+  hours_thursday: 4:00pm-9:00pm
+  hours_friday: 4:00pm-9:00pm
+  hours_saturday: 4:00pm-9:00pm
+  hours_sunday: 4:00pm-9:00pm
 - name: Front Porch & Barts Tavern
   description:
   delivery_notes: Delivery w/in 3 miles, Postmates, HCBB
@@ -97,6 +97,301 @@
   hours_friday: 4:00pm-10:00pm
   hours_saturday: 12:00pm-10:00pm
   hours_sunday: 12:00pm-10:00pm
-
-
-
+- name: The C House
+  description:
+  delivery_notes: HCBB, UberEats, Door Dash, Local Delivery in 6 Miles
+  notes: Beer and wine discounted with food
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email:
+  contact_phone: 813-488-4813
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 6005 N Florida Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33604
+  link_facebook: https://facebook.com/the.c.house.tampa
+  link_twitter:
+  link_instagram:
+  link_website: https://thechouse.com/
+  link_menu: https://thechouse.com/menus/
+  drive_through_drive_up: true
+  takeout: true
+  delivery: true
+  open: true
+  open_hours:
+  hours_monday: 11:30am-9:00pm
+  hours_tuesday: 11:30am-9:00pm
+  hours_wednesday: 11:30am-9:00pm
+  hours_thursday: 11:30am-9:00pm
+  hours_friday: 11:30am-9:00pm
+  hours_saturday: 11:30am-9:00pm
+  hours_sunday: 11:30am-9:00pm
+- name: Cappys
+  description:
+  delivery_notes:
+  notes: Beer and wine half price with food purchase. Accept cash or check only
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email:
+  contact_phone: 813-238-1516
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 4910 N Florida Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33603
+  link_facebook: https://facebook.com/cappysseminoleheights
+  link_twitter:
+  link_instagram:
+  link_website: http://www.cappyspizzaonline.com/
+  link_menu: http://www.cappyspizzaonline.com/Menu.aspx
+  drive_through_drive_up: false
+  takeout: true
+  delivery: false
+  open: true
+  open_hours:
+  hours_monday: 5:00pm-9:00pm
+  hours_tuesday: 5:00pm-9:00pm
+  hours_wednesday: 5:00pm-9:00pm
+  hours_thursday: 5:00pm-9:00pm
+  hours_friday: 5:00pm-9:00pm
+  hours_saturday: 5:00pm-9:00pm
+  hours_sunday: 5:00pm-9:00pm
+- name: c.1949
+  description:
+  delivery_notes:
+  notes: Offering cans, bottles & growlers of beer and sangria. Snacks available for purchase as well. Sauc N Wings food truck on site every day except Tues- Xtreme Tacos on Tuesday
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email: info@c1949.com
+  contact_phone: 813-990-8883
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 6905 N Orleans Ave
+  address_city: Tampa, FL 33604
+  address_state: FL
+  address_zip: 33604
+  link_facebook:
+  link_twitter:
+  link_instagram:
+  link_website: http://c1949.com/
+  link_menu:
+  drive_through_drive_up: false
+  takeout: true
+  delivery: false
+  open: true
+  open_hours:
+  hours_monday: 3:00pm-8:00pm
+  hours_tuesday: 3:00pm-8:00pm
+  hours_wednesday: 3:00pm-8:00pm
+  hours_thursday: 3:00pm-8:00pm
+  hours_friday: 3:00pm-8:00pm
+  hours_saturday: 3:00pm-8:00pm
+  hours_sunday: 3:00pm-8:00pm
+- name: Clementine BAKED
+  description:
+  delivery_notes: UberEATS
+  notes: Text number for menus or special orders. Fresh baked goods - located inside Christ Fellowship Church - near Sligh & Central
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email:
+  contact_phone: 813-382-5575
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 300 E Sligh Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33604
+  link_facebook: https://www.facebook.com/eatclementine/
+  link_twitter:
+  link_instagram:
+  link_website:
+  link_menu:
+  drive_through_drive_up: true
+  takeout: true
+  delivery: true
+  open: true
+  open_hours:
+  hours_monday: 8:00am-12:00pm
+  hours_tuesday: 8:00am-12:00pm
+  hours_wednesday: 8:00am-12:00pm
+  hours_thursday: 8:00am-12:00pm
+  hours_friday: 8:00am-12:00pm
+  hours_saturday: closed
+  hours_sunday: closed
+- name: Ebisu Sushi Shack
+  description:
+  delivery_notes: WE ARE NOW ACCEPTING UBER EATS AND CURB-SIDE PICK-UP IS AVAILABLE
+  notes: We will be open 7 days a week from 4:00 to 9:30
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email: sushishack5116@gmail.com
+  contact_phone: 813-252-6393
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 5116 N Nebraska Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33603
+  link_facebook: https://www.facebook.com/EbisuSushiShack5116/
+  link_twitter:
+  link_instagram:
+  link_website: http://ebisusushishack.com/
+  link_menu: http://ebisusushishack.com/menu/
+  drive_through_drive_up: true
+  takeout: true
+  delivery: true
+  open: true
+  open_hours:
+  hours_monday: 4:00-9:30pm
+  hours_tuesday: 4:00-9:30pm
+  hours_wednesday: 4:00-9:30pm
+  hours_thursday: 4:00-9:30pm
+  hours_friday: 4:00-9:30pm
+  hours_saturday: 4:00-9:30pm
+  hours_sunday: 4:00-9:30pm
+- name: Ground Foods Cafe
+  description:
+  delivery_notes:
+  notes: Ground Foods Café
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email:
+  contact_phone: 813-515-7562
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 6428 N Florida Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33604
+  link_facebook: https://www.facebook.com/groundfoodscafe/
+  link_twitter:
+  link_instagram:
+  link_website: http://www.groundfoodscafe.com/
+  link_menu: http://www.groundfoodscafe.com/daily-menu.html
+  drive_through_drive_up: true
+  takeout: true
+  delivery: false
+  open: true
+  open_hours:
+  hours_monday: closed
+  hours_tuesday: 4:00pm-9:00pm
+  hours_wednesday: 4:00pm-9:00pm
+  hours_thursday: 4:00pm-9:00pm
+  hours_friday: 4:00pm-9:00pm
+  hours_saturday: 4:00pm-9:00pm
+  hours_sunday: closed
+- name: Gulf Coast Sourdough
+  description:
+  delivery_notes: HCBB, Grubhub
+  notes:
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email: yum@gulfcoastsourdough.com
+  contact_phone: 813-304-1294
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 5214 N. Nebraska Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33603
+  link_facebook: https://www.facebook.com/GulfCoastSourdough
+  link_twitter: https://twitter.com/GCSourdough
+  link_instagram: https://www.instagram.com/gulfcoastsourdough/
+  link_website: www.gulfcoastsourdough.com
+  link_menu:
+  drive_through_drive_up: true
+  takeout: true
+  delivery: true
+  open: true
+  open_hours:
+  hours_monday: closed
+  hours_tuesday: 8:00am-3:00pm
+  hours_wednesday: 8:00am-3:00pm
+  hours_thursday: 8:00am-3:00pm
+  hours_friday: 8:00am-7:00pm
+  hours_saturday: 8:00am-3:00pm
+  hours_sunday: 9:00am-3:00pm
+- name: Harvest Bowl
+  description:
+  delivery_notes: UberEATS, HCBB
+  notes:
+  tooltip:
+  business_type: Food & Alcohol
+  contact_name:
+  contact_email: harvestbowltampa@gmail.com
+  contact_phone: 813-512-8306
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 6109 N. Florida Ave
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33604
+  link_facebook:
+  link_twitter:
+  link_instagram:
+  link_website: www.theharvestbowl.com
+  link_menu:
+  drive_through_drive_up: true
+  takeout: true
+  delivery: true
+  open: true
+  open_hours:
+  hours_monday: 10:00a-8:00pm
+  hours_tuesday: 10:00a-8:00pm
+  hours_wednesday: 10:00a-8:00pm
+  hours_thursday: 10:00a-8:00pm
+  hours_friday: 10:00a-8:00pm
+  hours_saturday: 10:00a-8:00pm
+  hours_sunday: 10:00a-8:00pm
+- name: PostNet
+  description:
+  delivery_notes:
+  notes:
+  tooltip:
+  business_type: Shipping & Printing
+  contact_name:
+  contact_email: fl178@postnet.com
+  contact_phone: 813-565-0010
+  contact_fax:
+  address_lat:
+  address_lng:
+  address_street: 6421 N Florida Ave
+  address_street2: Ste D
+  address_city: Tampa
+  address_state: FL
+  address_zip: 33604
+  link_facebook:
+  link_twitter:
+  link_instagram:
+  link_website: https://locations.postnet.com/fl/tampa/6421-n.-florida-ave
+  link_menu:
+  drive_through_drive_up:
+  takeout:
+  delivery:
+  open:
+  open_hours:
+  hours_monday: 11:00am-5:30pm
+  hours_tuesday: 11:00am-5:30pm
+  hours_wednesday: 11:00am-5:30pm
+  hours_thursday: 11:00am-5:30pm
+  hours_friday: 11:00am-5:30pm
+  hours_saturday: 10:00am-2:00pm
+  hours_sunday: closed
