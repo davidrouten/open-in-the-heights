@@ -78,7 +78,7 @@ export default class LocationList extends React.Component {
         <hr/>
         <div className="row">
           <div className="col-md-6">
-            <h5>Type of Business</h5>
+            <h6>Type of Business</h6>
             <div>
               <div key="-1" className="form-check">
                 <label className="form-check-label">
@@ -111,7 +111,7 @@ export default class LocationList extends React.Component {
             </div>
           </div>
           <div className="col-md-6">
-            <h5>Delivery Options</h5>
+            <h6>Delivery Options</h6>
             <div key="driveThroughDriveUp">
               <label className="form-check-label">
                 <input
@@ -141,7 +141,8 @@ export default class LocationList extends React.Component {
             </div>
           </div>
         </div>
-        <h1 className="text-center">Locations</h1>
+        <hr/>
+        <h6>Locations</h6>
         <div className="list-group">
           {this.state.list.map((location, index) => {
             return (

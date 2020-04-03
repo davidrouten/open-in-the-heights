@@ -4,6 +4,7 @@ import { Location } from '../components/location'
 import LocationList from '../components/location_list'
 import axios from 'axios'
 
+const shadowBoxClasses = 'shadow p-3 mb-5 bg-white rounded'
 
 export class App extends React.Component {
   constructor(props) {
@@ -49,7 +50,7 @@ export class App extends React.Component {
     return (
       <div className="row" style={ { marginTop: '40px' } }>
         <div className="col-md-1"></div>
-        <div className="col-md-6" style={ { minHeight: '640px' } }>
+        <div className={ `col-md-6 ${shadowBoxClasses}`} style={ { height: '640px' } }>
           <MapContainer
             locations={this.state.locations}
             currentLocation={this.state.currentLocation}
