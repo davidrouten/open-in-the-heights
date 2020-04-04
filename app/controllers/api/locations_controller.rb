@@ -1,6 +1,6 @@
 class Api::LocationsController < ApplicationController
   def index
-    render json: Location.open.visible
+    render json: Location.is_visible
   end
 
   def show

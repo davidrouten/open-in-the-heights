@@ -13,138 +13,208 @@
 
   <div class="row">
     <div class="col-md-4">
+      <h6 class="h6">General Info</h6>
       <div class="field">
-        <%= f.label :name %><br />
-        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :name, class: 'small' %><br />
+        <%= f.text_field :name, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :contact_name %><br />
-        <%= f.text_field :contact_name, class: 'form-control' %>
+        <%= f.label :contact_name, class: 'small' %><br />
+        <%= f.text_field :contact_name, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :contact_email %><br />
-        <%= f.text_field :contact_email, class: 'form-control' %>
+        <%= f.label :contact_email, class: 'small' %><br />
+        <%= f.text_field :contact_email, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :contact_phone %><br />
-        <%= f.text_field :contact_phone, class: 'form-control' %>
+        <%= f.label :contact_phone, class: 'small' %><br />
+        <%= f.text_field :contact_phone, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :contact_fax %><br />
-        <%= f.text_field :contact_fax, class: 'form-control' %>
+        <%= f.label :contact_fax, class: 'small' %><br />
+        <%= f.text_field :contact_fax, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :link_facebook %><br />
-        <%= f.text_field :link_facebook, class: 'form-control' %>
+        <%= f.label :link_facebook, class: 'small' %><br />
+        <%= f.text_field :link_facebook, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :link_twitter %><br />
-        <%= f.text_field :link_twitter, class: 'form-control' %>
+        <%= f.label :link_twitter, class: 'small' %><br />
+        <%= f.text_field :link_twitter, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :link_instagram %><br />
-        <%= f.text_field :link_instagram, class: 'form-control' %>
+        <%= f.label :link_instagram, class: 'small' %><br />
+        <%= f.text_field :link_instagram, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :link_website %><br />
-        <%= f.text_field :link_website, class: 'form-control' %>
+        <%= f.label :link_website, class: 'small' %><br />
+        <%= f.text_field :link_website, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :link_menu %><br />
-        <%= f.text_field :link_menu, class: 'form-control' %>
+        <%= f.label :link_menu, class: 'small' %><br />
+        <%= f.text_field :link_menu, class: 'form-control form-control-sm' %>
+      </div>
+
+      <div class="field">
+        <%= f.label :notes, class: 'small' %><br />
+        <%= f.text_area :notes, class: 'form-control form-control-sm' %>
       </div>
 
     </div>
     <div class="col-md-4">
-
+      <h6 class="h6">Address</h6>
       <div class="field">
-        <%= f.label :address_lat %><br />
-        <%= f.text_field :address_lat, class: 'form-control' %>
+        <%= f.label :address_lat, class: 'small' %><br />
+        <%= f.text_field :address_lat, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :address_lng %><br />
-        <%= f.text_field :address_lng, class: 'form-control' %>
+        <%= f.label :address_lng, class: 'small' %><br />
+        <%= f.text_field :address_lng, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :address_street %><br />
-        <%= f.text_field :address_street, class: 'form-control' %>
+        <%= f.label :address_street, class: 'small' %><br />
+        <%= f.text_field :address_street, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :address_street2 %><br />
-        <%= f.text_field :address_street2, class: 'form-control' %>
+        <%= f.label :address_street2, class: 'small' %><br />
+        <%= f.text_field :address_street2, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :address_city %><br />
-        <%= f.text_field :address_city, class: 'form-control' %>
+        <%= f.label :address_city, class: 'small' %><br />
+        <%= f.text_field :address_city, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :address_state %><br />
-        <%= f.text_field :address_state, class: 'form-control' %>
+        <%= f.label :address_state, class: 'small' %><br />
+        <%= f.text_field :address_state, class: 'form-control form-control-sm' %>
       </div>
 
       <div class="field">
-        <%= f.label :address_zip %><br />
-        <%= f.text_field :address_zip, class: 'form-control' %>
+        <%= f.label :address_zip, class: 'small' %><br />
+        <%= f.text_field :address_zip, class: 'form-control form-control-sm' %>
       </div>
 
-      <div class="field">
-        <%= f.label :drive_through_drive_up %><br />
-        <%= f.check_box :drive_through_drive_up, class: 'form-control' %>
-      </div>
+      <hr/>
 
       <div class="field">
-        <%= f.label :takeout %><br />
-        <%= f.check_box :takeout, class: 'form-control' %>
+        <h6 class="h6">Delivery Options</h6>
+        <div class="form-check">
+          <%= f.check_box :drive_through_drive_up, class: 'form-check-input' %>
+          <%= f.label :drive_through_drive_up, class: 'form-check-label small' %>
+        </div>
+
+        <div class="form-check">
+          <%= f.check_box :takeout, class: 'form-check-input' %>
+          <%= f.label :takeout, class: 'form-check-label small' %>
+        </div>
+
+        <div class="form-check">
+          <%= f.check_box :delivery, class: 'form-check-input' %>
+          <%= f.label :delivery, class: 'form-check-label small' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :delivery_notes, class: 'small' %><br />
+          <%= f.text_area :delivery_notes, class: 'form-control form-control-sm' %>
+        </div>
       </div>
 
-      <div class="field">
-        <%= f.label :delivery %><br />
-        <%= f.check_box :delivery, class: 'form-control' %>
-      </div>
     </div>
 
     <div class="col-md-4">
+      <div class="field">
+        <h6 class="h6">Display Controls</h6>
+        <div class="field">
+          <%= f.label :business_type, class: 'small' %><br/>
+          <%= f.label :business_type, "Current types: #{Location.unique_business_types.join(', ')}", class: 'small' %>
+          <%= f.text_field :business_type, class: 'form-control form-control-sm' %>
+        </div>
 
+        <div class="field">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-check">
+                <%= f.check_box :open, class: 'form-check-input' %>
+                <%= f.label :open, class: 'form-check-label small' %>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check">
+                <%= f.check_box :visible, class: 'form-check-input' %>
+                <%= f.label :visible, class: 'form-check-label small' %>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="alert alert-danger small py-2 px-2 my-0" role="alert">
+          If location is not locked, changes to app could overwrite data.
+        </div>
+        <div class="form-check">
+          <%= f.check_box :locked, class: 'form-check-input' %>
+          <%= f.label :locked, 'Locked', class: 'form-check-label small' %><br/>
+        </div>
+
+      </div>
+
+      <hr/>
+
+      <div class="field">
+        <h6 class="field">Hours</h6>
+
+        <div class="field">
+          <%= f.label :hours_monday, class: 'small' %><br />
+          <%= f.text_field :hours_monday, class: 'form-control form-control-sm' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hours_tuesday, class: 'small' %><br />
+          <%= f.text_field :hours_tuesday, class: 'form-control form-control-sm' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hours_wednesday, class: 'small' %><br />
+          <%= f.text_field :hours_wednesday, class: 'form-control form-control-sm' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hours_thursday, class: 'small' %><br />
+          <%= f.text_field :hours_thursday, class: 'form-control form-control-sm' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hours_friday, class: 'small' %><br />
+          <%= f.text_field :hours_friday, class: 'form-control form-control-sm' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hours_saturday, class: 'small' %><br />
+          <%= f.text_field :hours_saturday, class: 'form-control form-control-sm' %>
+        </div>
+
+        <div class="field">
+          <%= f.label :hours_sunday, class: 'small' %><br />
+          <%= f.text_field :hours_sunday, class: 'form-control form-control-sm' %>
+        </div>
+      </div>
     </div>
   </div>
-
 
   <div class="actions">
     <%= f.submit class: 'btn btn-primary' %>
   </div>
 <% end %>
-
-<!--  t.string "name"
-    t.string "tooltip"
-    t.text "description"
-
-    t.boolean "open"
-    t.boolean "visible"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.text "open_hours"
-    t.string "business_type"
-    t.text "notes"
-    t.text "delivery_notes"
-    t.string "keywords"
-    t.string "hours_monday"
-    t.string "hours_tuesday"
-    t.string "hours_wednesday"
-    t.string "hours_thursday"
-    t.string "hours_friday"
-    t.string "hours_saturday"
-    t.string "hours_sunday" -->

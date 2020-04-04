@@ -1,6 +1,6 @@
 class Api::SearchController < ApplicationController
   def index
-    locations = Location.open.visible.order(name: :asc)
+    locations = Location.is_visible.order(name: :asc)
 
     if params[:term].present?
       term = URI.decode(params[:term].to_s)
