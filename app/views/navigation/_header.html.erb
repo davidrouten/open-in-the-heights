@@ -5,7 +5,12 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
-      <li class="nav-item active">
+    <% if current_user&.is_admin? %>
+        <li class="nav-item">
+          <%= link_to 'Admin', admin_dashboard_index_path, class: 'nav-link' %>
+        </li>
+      <% end %>
+      <li class="nav-item">
         <a class="nav-link" href="mailto:support@openintheheights.com" target="_blank">Contact us<span class="sr-only">(current)</span></a>
       </li>
     </ul>

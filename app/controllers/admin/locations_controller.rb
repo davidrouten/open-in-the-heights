@@ -40,7 +40,7 @@ class Admin::LocationsController < Admin::ApplicationController
   def update
     respond_to do |format|
       if @location.update(location_params)
-        format.html { redirect_to [:admin, @location], notice: 'Location was successfully updated.' }
+        format.html { redirect_to admin_locations_url, notice: 'Location was successfully updated.' }
       else
         format.html { render :edit }
       end
