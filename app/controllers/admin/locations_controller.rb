@@ -64,6 +64,27 @@ class Admin::LocationsController < Admin::ApplicationController
 
     # Only allow a list of trusted parameters through.
     def location_params
-      params.fetch(:location, {})
+      params.require(:location).permit(
+        :name,
+        :contact_name,
+        :contact_email,
+        :contact_phone,
+        :contact_fax,
+        :link_facebook,
+        :link_twitter,
+        :link_instagram,
+        :link_website,
+        :link_menu,
+        :address_lat,
+        :address_lng,
+        :address_street,
+        :address_street2,
+        :address_city,
+        :address_state,
+        :address_zip,
+        :drive_through_drive_up,
+        :takeout,
+        :delivery
+      )
     end
 end
