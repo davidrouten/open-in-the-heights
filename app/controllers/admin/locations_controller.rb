@@ -75,6 +75,7 @@ class Admin::LocationsController < Admin::ApplicationController
         :link_instagram,
         :link_website,
         :link_menu,
+        :notes,
         :address_lat,
         :address_lng,
         :address_street,
@@ -84,7 +85,19 @@ class Admin::LocationsController < Admin::ApplicationController
         :address_zip,
         :drive_through_drive_up,
         :takeout,
-        :delivery
+        :delivery,
+        :delivery_notes,
+        :business_type,
+        :open,
+        :visible,
+        :locked,
+        :hours_monday,
+        :hours_tuesday,
+        :hours_wednesday,
+        :hours_thursday,
+        :hours_friday,
+        :hours_saturday,
+        :hours_sunday
       )
     end
 end
