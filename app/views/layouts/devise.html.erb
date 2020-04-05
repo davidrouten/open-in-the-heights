@@ -12,8 +12,9 @@
 
   <body>
     <%= render 'navigation/header' %>
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-top:60px;">
       <%= yield %>
     </div>
+    <%= render 'navigation/footer' %>
   </body>
 </html>

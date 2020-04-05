@@ -15,13 +15,13 @@ export const Location = (props) => {
         <div className="card-body text-secondary">
           <div className="card-text">
             {props.data.links.map(link => {
-              return <a href={link.url} target="_blank" key={link.name} alt={link.name}>{link.name}</a>
+              return <a href={link.url} target="_blank" key={link.name} alt={link.name} className="text-primary">{link.name}</a>
             }).reduce((prev, curr) => [prev, ' | ', curr])}
           </div>
           <hr/>
 
-          <h5 className="card-title">Contact</h5>
-          <div className="card-text">
+          <h5 className="card-title my-1">Contact</h5>
+          <div className="card-text small">
             {props.data.contact_phone ? (
               <div>Phone: {props.data.contact_phone}</div>
             ) : (
@@ -35,27 +35,26 @@ export const Location = (props) => {
           </div>
           <hr/>
 
-          <h5 className="card-title">Address</h5>
-          <div className="card-text">
+          <h5 className="card-title my-1">Address</h5>
+          <div className="card-text small">
             <div>{props.data.address.street}</div>
             <div>{props.data.address.street2}</div>
             <div>{props.data.address.city}, {props.data.address.state} {props.data.address.zip}</div>
           </div>
           <hr/>
 
-          <h5 className="card-title">Hours</h5>
-          <div className="card-text">
+          <h5 className="card-title my-1">Hours</h5>
+          <div className="card-text small">
             {['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(day => {
               return <div key={day}><strong>{capitalize(day)}:</strong> {props.data.hours[day]}</div>
             })}
           </div>
-          <hr/>
 
           {props.data.delivery_notes ? (
             <>
-              <h5 className="card-title">Delivery Notes</h5>
-              <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.delivery_notes }}></div>
               <hr/>
+              <h5 className="card-title my-1">Delivery Notes</h5>
+              <div className="card-text small" dangerouslySetInnerHTML={{ __html: props.data.delivery_notes }}></div>
             </>
           ) : (
             null
@@ -63,8 +62,9 @@ export const Location = (props) => {
 
           {props.data.notes ? (
             <>
-              <h5 className="card-title">Notes</h5>
-              <div className="card-text" dangerouslySetInnerHTML={{ __html: props.data.notes }}></div>
+              <hr/>
+              <h5 className="card-title my-1">Notes</h5>
+              <div className="card-text small" dangerouslySetInnerHTML={{ __html: props.data.notes }}></div>
             </>
           ) : (
             null
