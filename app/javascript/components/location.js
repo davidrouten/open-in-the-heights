@@ -23,12 +23,12 @@ export const Location = (props) => {
           <h5 className="card-title my-1">Contact</h5>
           <div className="card-text small">
             {props.data.contact_phone ? (
-              <div>Phone: {props.data.contact_phone}</div>
+              <div>Phone: <a href={ `tel:${props.data.contact_phone}` } className="text-primary">{props.data.contact_phone}</a></div>
             ) : (
               null
             )}
             {props.data.contact_email ? (
-              <div>Email: {props.data.contact_email}</div>
+              <div>Email: <a href={ `mailto:${props.data.contact_email}` } className="text-primary" target="_blank">{props.data.contact_email}</a></div>
             ) : (
               null
             )}
