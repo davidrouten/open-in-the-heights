@@ -1,7 +1,9 @@
 import React from 'react'
-import { capitalize } from './utils'
+import { capitalize, getDayOfWeek } from './utils'
 
 export const Location = (props) => {
+  var dayOfWeek = getDayOfWeek(new Date())
+
   return (
     <>
       <div>
@@ -12,13 +14,20 @@ export const Location = (props) => {
           {props.data.name}
           <span style={{color: props.data.is_open ? 'green' : 'red', float: 'right'}}>{props.data.is_open ? 'Open' : 'Closed'}</span>
         </div>
+
         <div className="card-body text-secondary">
-          <div className="card-text">
-            {props.data.links.map(link => {
-              return <a href={link.url} target="_blank" key={link.name} alt={link.name} className="text-primary">{link.name}</a>
-            }).reduce((prev, curr) => [prev, ' | ', curr])}
-          </div>
-          <hr/>
+          {props.data.links.length > 0 ? (
+            <>
+              <div className="card-text">
+                {props.data.links.map(link => {
+                  return <a href={link.url} target="_blank" key={link.name} alt={link.name} className="text-primary">{link.name}</a>
+                }).reduce((prev, curr) => [prev, ' | ', curr])}
+              </div>
+              <hr/>
+            </>
+          ) : (
+            null
+          )}
 
           <h5 className="card-title my-1">Contact</h5>
           <div className="card-text small">
@@ -46,7 +55,7 @@ export const Location = (props) => {
           <h5 className="card-title my-1">Hours</h5>
           <div className="card-text small">
             {['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(day => {
-              return <div key={day}><strong>{capitalize(day)}:</strong> {props.data.hours[day]}</div>
+              return <div key={day} className={ dayOfWeek === day ? 'text-info' : null }><strong>{capitalize(day)}:</strong> {props.data.hours[day]}</div>
             })}
           </div>
 
