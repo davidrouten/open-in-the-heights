@@ -24,7 +24,7 @@ class Admin::LocationsController < Admin::ApplicationController
   # POST /locations
   # POST /locations.json
   def create
-    @location = Location.new(location_params)
+    @location = Location.new(location_params.merge(created_by: current_user))
 
     respond_to do |format|
       if @location.save
@@ -39,7 +39,7 @@ class Admin::LocationsController < Admin::ApplicationController
   # PATCH/PUT /locations/1.json
   def update
     respond_to do |format|
-      if @location.update(location_params)
+      if @location.update(location_params.merge(updated_by: current_user))
         format.html { redirect_to admin_locations_url, notice: 'Location was successfully updated.' }
       else
         format.html { render :edit }

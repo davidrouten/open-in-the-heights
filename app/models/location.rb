@@ -4,6 +4,9 @@ class Location < ApplicationRecord
   scope :is_visible, -> { where(visible: true) }
   scope :is_open, -> { where(open: true) }
 
+  belongs_to :created_by, class_name: "User"
+  belongs_to :updated_by, class_name: "User"
+
   def self.unique_business_types
     Location.pluck(:business_type).uniq
   end
