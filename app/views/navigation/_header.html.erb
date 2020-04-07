@@ -1,5 +1,8 @@
 <nav class="navbar navbar-expand-sm navbar-light fixed-top bg-light">
-  <%= link_to 'Open in the Heights', root_path, class: 'navbar-brand' %>
+  <%= link_to root_path, class: 'navbar-brand' do %>
+    <%= image_tag 'heights', width: '30', height: '30', class: 'd-inline-block align-top' %>
+    Open in the Heights
+  <% end %>
   <ul class="navbar-nav">
     <% if current_user&.is_admin? %>
       <li class="nav-item"><%= link_to 'Admin', admin_dashboard_index_path, class: 'nav-link' %></li>

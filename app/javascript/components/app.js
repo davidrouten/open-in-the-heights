@@ -58,7 +58,7 @@ export class App extends React.Component {
         </div>
         <div className="row" style={{ paddingBottom: '60px' }}>
           <div className="col-md-1"></div>
-          <div className={ `col-md-6 ${shadowBoxClasses}`} style={ { height: '560px' } }>
+          <div className={ `col-md-6 ${shadowBoxClasses}`} style={ { height: '600px' } }>
             <MapContainer
               locations={this.state.locations}
               currentLocation={this.state.currentLocation}
