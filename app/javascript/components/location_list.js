@@ -128,6 +128,8 @@ export default class LocationList extends React.Component {
               </label>
             </div>
           </div>
+          <div className="col-md-12 text-muted small mt-2">For restaurants participating in <a href="https://www.facebook.com/groups/heightsbrigade/" target="_blank">Heights Citizens Bicycle Brigade</a> free local delivery, look for HCBB under the delivery notes OR search for HCBB.
+          </div>
         </div>
         <hr/>
         <h6>Locations</h6>
