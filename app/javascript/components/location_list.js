@@ -91,7 +91,7 @@ export default class LocationList extends React.Component {
             <h6>Type of Business</h6>
             <select className="form-control" onChange={event => this.setState({businessType: event.target.value})} value={this.state.businessType}>
               <option value="">all</option>
-              {this.uniqueBusinessTypes().map((business_type, index) => {
+              {this.uniqueBusinessTypes().sort().map((business_type, index) => {
                 return (
                   <option value={business_type} key={index}>{business_type}</option>
                 )
