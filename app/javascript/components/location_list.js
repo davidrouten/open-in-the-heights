@@ -29,7 +29,7 @@ export default class LocationList extends React.Component {
       })
   }
 
-   buildSearchQuery() {
+  buildSearchQuery() {
     var params = []
 
     if (this.state.searchTerm) {
@@ -89,36 +89,14 @@ export default class LocationList extends React.Component {
         <div className="row">
           <div className="col-md-6">
             <h6>Type of Business</h6>
-            <div>
-              <div key="-1" className="form-check">
-                <label className="form-check-label">
-                  <input
-                    name="business-types"
-                    type="radio"
-                    value=""
-                    onClick={event => this.setState({businessType: ""})}
-                    className="form-check-input"
-                  />
-                  &nbsp;all
-                </label>
-              </div>
+            <select className="form-control" onChange={event => this.setState({businessType: event.target.value})} value={this.state.businessType}>
+              <option value="">all</option>
               {this.uniqueBusinessTypes().map((business_type, index) => {
                 return (
-                  <div key={index} className="form-check">
-                    <label className="form-check-label">
-                      <input
-                        name="business-types"
-                        type="radio"
-                        value={business_type}
-                        onClick={event => this.setState({businessType: event.target.value})}
-                        className="form-check-input"
-                      />
-                     &nbsp;{business_type}
-                    </label>
-                  </div>
+                  <option value={business_type} key={index}>{business_type}</option>
                 )
               })}
-            </div>
+            </select>
           </div>
           <div className="col-md-6">
             <h6>Delivery Options</h6>
@@ -153,7 +131,7 @@ export default class LocationList extends React.Component {
         </div>
         <hr/>
         <h6>Locations</h6>
-        <div className="list-group">
+        <div className="list-group" style={ { maxHeight: '380px', overflow: 'overlay' } }>
           {this.state.list.map((location, index) => {
             return (
               <button
@@ -165,7 +143,11 @@ export default class LocationList extends React.Component {
                   <h5 className="mb-1">{location['name']}</h5>
                   <small></small>
                 </div>
-                <p className="mb-1"><Icon name="clock"/>&nbsp;{this.buildCurrentDayHours(location)}</p>
+                {location['hours'][this.state.currentDayOfWeek] ? (
+                  <p className="mb-0"><Icon name="clock"/>&nbsp;{this.buildCurrentDayHours(location)}</p>
+                ) : (
+                  null
+                )}
                 <small>{buildAddress(location['address'])}</small>
               </button>
             )
