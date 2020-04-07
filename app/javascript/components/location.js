@@ -11,8 +11,8 @@ export const Location = (props) => {
       </div>
       <div className="card border-secondary mb-3">
         <div className="card-header">
-          {props.data.name}
-          <span style={{color: props.data.is_open ? 'green' : 'red', float: 'right'}}>{props.data.is_open ? 'Open' : 'Closed'}</span>
+          <strong>{props.data.name}</strong>
+          <span style={{ float: 'right' }}>{props.data.business_type}</span>
         </div>
 
         <div className="card-body text-secondary">

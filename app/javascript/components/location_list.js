@@ -131,7 +131,7 @@ export default class LocationList extends React.Component {
         </div>
         <hr/>
         <h6>Locations</h6>
-        <div className="list-group" style={ { maxHeight: '380px', overflow: 'overlay' } }>
+        <div className="list-group" style={ { maxHeight: '380px', overflow: 'scroll' } }>
           {this.state.list.map((location, index) => {
             return (
               <button
@@ -141,7 +141,7 @@ export default class LocationList extends React.Component {
               >
                 <div className="d-flex w-100 justify-content-between">
                   <h5 className="mb-1">{location['name']}</h5>
-                  <small></small>
+                  <small>{location['business_type']}</small>
                 </div>
                 {location['hours'][this.state.currentDayOfWeek] ? (
                   <p className="mb-0"><Icon name="clock"/>&nbsp;{this.buildCurrentDayHours(location)}</p>

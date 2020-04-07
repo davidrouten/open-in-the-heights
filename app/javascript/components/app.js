@@ -52,7 +52,7 @@ export class App extends React.Component {
         <div className="row" style={{ paddingTop: '60px' }}>
           <div className="col-md-12">
             <div className="alert alert-info py-2 small" role="alert">
-              Open in the Heights is an open source project whose goal is to connect our neighbors with our fantastic local eateries and businesses. Email us at <a href="mailto:support@openintheheights.com" className="text-primary" target="_blank">support@openintheheights.com</a> with questions and suggestions!
+              <strong>As this current situation is constantly changing, we are doing our best to keep information current but please call the business to confirm hours and availability.</strong><br/>Open in the Heights is an open source project whose goal is to connect our neighbors with our fantastic local eateries and businesses. Email us at <a href="mailto:support@openintheheights.com" className="text-primary" target="_blank">support@openintheheights.com</a> with questions and suggestions!
             </div>
           </div>
         </div>
