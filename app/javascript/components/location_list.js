@@ -139,11 +139,10 @@ export default class LocationList extends React.Component {
               <button
                 key={index}
                 onClick={() => this.props.setLocation(location['id'])}
-                className="list-group-item py-2 px-2 list-group-item-action clearfix"
+                className="list-group-item py-2 px-2 list-group-item-action"
               >
                 <div className="d-flex w-100 justify-content-between">
                   <h5 className="mb-1">{location['name']}</h5>
-                  <small>{location['business_type']}</small>
                 </div>
                 {location['hours'][this.state.currentDayOfWeek] ? (
                   <p className="mb-0"><Icon name="clock"/>&nbsp;{this.buildCurrentDayHours(location)}</p>
