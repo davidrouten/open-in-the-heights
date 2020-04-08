@@ -133,7 +133,7 @@ export default class LocationList extends React.Component {
         </div>
         <hr/>
         <h6>Locations</h6>
-        <div className="list-group" style={ { maxHeight: '380px', overflow: 'scroll' } }>
+        <div className="list-group">
           {this.state.list.map((location, index) => {
             return (
               <button
