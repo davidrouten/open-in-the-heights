@@ -137,9 +137,10 @@ export default class LocationList extends React.Component {
           {this.state.list.map((location, index) => {
             return (
               <button
+                type="button"
                 key={index}
                 onClick={() => this.props.setLocation(location['id'])}
-                className="list-group-item py-2 px-2 text-left"
+                className="list-group-item py-2 px-2 list-group-item-action"
               >
                 <div className="d-flex w-100 justify-content-between">
                   <h5 className="mb-1">{location['name']}</h5>
