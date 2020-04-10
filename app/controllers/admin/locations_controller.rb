@@ -4,7 +4,7 @@ class Admin::LocationsController < Admin::ApplicationController
   # GET /locations
   # GET /locations.json
   def index
-    @locations = Location.all
+    @locations = Location.all.order('LOWER(name) ASC')
   end
 
   # GET /locations/1

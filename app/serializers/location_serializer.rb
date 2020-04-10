@@ -1,8 +1,7 @@
 class LocationSerializer < ActiveModel::Serializer
   attributes :id, :name, :tooltip, :description, :notes, :delivery_notes,
-    :business_type, :contact_phone, :contact_email, :open_hours, :is_open,
-    :is_closing_soon, :drive_through_drive_up, :takeout, :delivery,
-    :coords, :address, :hours, :links
+    :delivery_options, :business_type, :contact_phone, :contact_email,
+    :open_hours, :is_open, :is_closing_soon, :coords, :address, :hours, :links
 
   def is_open
     true
@@ -10,6 +9,14 @@ class LocationSerializer < ActiveModel::Serializer
 
   def is_closing_soon
     false
+  end
+
+  def delivery_options
+    {
+      drive_through_drive_up: object.drive_through_drive_up.present? ? 'Drive through/Drive up' : nil,
+      takeout: object.takeout.present? ? 'Takeout' : nil,
+      delivery: object.delivery.present? ? 'Delivery' : nil
+    }.compact.map { |key, value| value }.join(', ')
   end
 
   def coords

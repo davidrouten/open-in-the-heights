@@ -52,22 +52,34 @@ export const Location = (props) => {
           </div>
           <hr/>
 
+          {props.data.delivery_options ? (
+            <>
+              <h5 className="card-title my-1">Takeout/Delivery Options</h5>
+              <div className="card-text small">
+                <div>{props.data.delivery_options}</div>
+              </div>
+              <hr/>
+            </>
+          ) : (
+            null
+          )}
+
+          {props.data.delivery_notes ? (
+            <>
+              <h5 className="card-title my-1">Delivery Notes</h5>
+              <div className="card-text small" dangerouslySetInnerHTML={{ __html: props.data.delivery_notes }}></div>
+              <hr/>
+            </>
+          ) : (
+            null
+          )}
+
           <h5 className="card-title my-1">Hours</h5>
           <div className="card-text small">
             {['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'].map(day => {
               return <div key={day} className={ dayOfWeek === day ? 'text-info' : null }><strong>{capitalize(day)}:</strong> {props.data.hours[day]}</div>
             })}
           </div>
-
-          {props.data.delivery_notes ? (
-            <>
-              <hr/>
-              <h5 className="card-title my-1">Delivery Notes</h5>
-              <div className="card-text small" dangerouslySetInnerHTML={{ __html: props.data.delivery_notes }}></div>
-            </>
-          ) : (
-            null
-          )}
 
           {props.data.notes ? (
             <>
