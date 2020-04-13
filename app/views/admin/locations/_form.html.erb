@@ -132,6 +132,14 @@
         </div>
       </div>
 
+      <div class="field">
+        <%= f.label :keywords, class: 'small' %><br />
+        <div class="alert alert-info small py-2 px-2 mb-2" role="alert">
+          Add search keywords separated by commas (no apostrophes necessary). Example could be: <strong>pizzas, calzone, wings, beer, wine, ice cream</strong>.<br/>Use commonly-searched terms that represent the business, and use plural instead of singular nouns unless the plural changes the spelling of the noun. I.e. use 'pizzas' because if someone searches 'pizza', it will find 'pizza' in 'pizzas'.
+        </div>
+        <%= f.text_field :keywords, class: 'form-control form-control-sm' %>
+      </div>
+
     </div>
 
     <div class="col-md-4">

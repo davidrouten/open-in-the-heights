@@ -87,6 +87,7 @@ class Admin::LocationsController < Admin::ApplicationController
         :takeout,
         :delivery,
         :delivery_notes,
+        :keywords,
         :business_type,
         :open,
         :visible,

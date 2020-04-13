@@ -5,10 +5,9 @@ class Api::SearchController < ApplicationController
     if params[:term].present?
       term = URI.decode(params[:term].to_s)
       locations = locations.where("LOWER(name) ILIKE ?", "%#{term}%")
-                           .or(locations.where("LOWER(notes) ILIKE ?", "%#{term}%"))
+                           .or(locations.where("LOWER(keywords) ILIKE ?", "%#{term}%"))
                            .or(locations.where("LOWER(delivery_notes) ILIKE ?", "%#{term}%"))
                            .or(locations.where("LOWER(address_street) ILIKE ?", "%#{term}%"))
-                           .or(locations.where("LOWER(address_zip) ILIKE ?", "%#{term}%"))
 
     end
 

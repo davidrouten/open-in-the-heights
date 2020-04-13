@@ -23,11 +23,13 @@ export const Location = (props) => {
                   return <a href={link.url} target="_blank" key={link.name} alt={link.name} className="text-primary">{link.name}</a>
                 }).reduce((prev, curr) => [prev, ' | ', curr])}
               </div>
-              <hr/>
+              <hr className="my-2" />
             </>
           ) : (
             null
           )}
+
+
 
           <h5 className="card-title my-1">Contact</h5>
           <div className="card-text small">
@@ -42,7 +44,7 @@ export const Location = (props) => {
               null
             )}
           </div>
-          <hr/>
+          <hr className="my-2" />
 
           <h5 className="card-title my-1">Address</h5>
           <div className="card-text small">
@@ -50,7 +52,7 @@ export const Location = (props) => {
             <div>{props.data.address.street2}</div>
             <div>{props.data.address.city}, {props.data.address.state} {props.data.address.zip}</div>
           </div>
-          <hr/>
+          <hr className="my-2" />
 
           {props.data.delivery_options ? (
             <>
@@ -58,7 +60,7 @@ export const Location = (props) => {
               <div className="card-text small">
                 <div>{props.data.delivery_options}</div>
               </div>
-              <hr/>
+              <hr className="my-2" />
             </>
           ) : (
             null
@@ -68,7 +70,7 @@ export const Location = (props) => {
             <>
               <h5 className="card-title my-1">Delivery Notes</h5>
               <div className="card-text small" dangerouslySetInnerHTML={{ __html: props.data.delivery_notes }}></div>
-              <hr/>
+              <hr className="my-2" />
             </>
           ) : (
             null
@@ -83,9 +85,18 @@ export const Location = (props) => {
 
           {props.data.notes ? (
             <>
-              <hr/>
+              <hr className="my-2" />
               <h5 className="card-title my-1">Notes</h5>
               <div className="card-text small" dangerouslySetInnerHTML={{ __html: props.data.notes }}></div>
+            </>
+          ) : (
+            null
+          )}
+
+          {props.data.keywords ? (
+            <>
+              <hr className="my-2" />
+              <div className="text-muted small"><strong>Keywords:</strong> {props.data.keywords}</div>
             </>
           ) : (
             null
