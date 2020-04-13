@@ -5,7 +5,7 @@ class LocationSerializer < ActiveModel::Serializer
     :address, :hours, :links
 
   def is_open
-    true
+    object.currently_open?
   end
 
   def is_closing_soon

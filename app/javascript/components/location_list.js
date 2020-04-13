@@ -147,7 +147,7 @@ export default class LocationList extends React.Component {
                   <small>{location['business_type']}</small>
                 </div>
                 {location['hours'][this.state.currentDayOfWeek] ? (
-                  <p className="mb-0"><Icon name="clock"/>&nbsp;{this.buildCurrentDayHours(location)}</p>
+                  <p className={`mb-0 ${location['is_open'] ? 'text-success' : 'text-danger'}`}><Icon name="clock"/>&nbsp;{this.buildCurrentDayHours(location)}</p>
                 ) : (
                   null
                 )}
