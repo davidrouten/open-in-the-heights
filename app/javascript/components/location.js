@@ -20,7 +20,7 @@ export const Location = (props) => {
             <>
               <div className="card-text">
                 {props.data.links.map(link => {
-                  return <a href={link.url} target="_blank" key={link.name} alt={link.name} className="text-primary">{link.name}</a>
+                  return <a href={link.url.startsWith('http') ? link.url : `https://${link.url}`} target="_blank" key={link.name} alt={link.name} className="text-primary">{link.name}</a>
                 }).reduce((prev, curr) => [prev, ' | ', curr])}
               </div>
               <hr className="my-2" />
