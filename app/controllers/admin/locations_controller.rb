@@ -86,6 +86,7 @@ class Admin::LocationsController < Admin::ApplicationController
         :drive_through_drive_up,
         :takeout,
         :delivery,
+        :dine_in,
         :delivery_notes,
         :keywords,
         :business_type,

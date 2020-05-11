@@ -27,6 +27,10 @@ class Api::SearchController < ApplicationController
       locations = locations.where(delivery: true)
     end
 
+    if params[:dine_in].present?
+      locations = locations.where(dine_in: true)
+    end
+
     render json: locations
   end
 end

@@ -13,6 +13,7 @@ export default class LocationList extends React.Component {
       driveThroughDriveUp: false,
       takeout: false,
       delivery: false,
+      dineIn: false,
       currentDayOfWeek: getDayOfWeek(new Date()),
     }
     this.searchLocations = this.searchLocations.bind(this)
@@ -52,6 +53,10 @@ export default class LocationList extends React.Component {
       params.push(['delivery', this.state.delivery])
     }
 
+    if (this.state.dineIn) {
+      params.push(['dine_in', this.state.dineIn])
+    }
+
     return params.map(row => `${row[0]}=${row[1]}`).join('&')
   }
 
@@ -67,7 +72,8 @@ export default class LocationList extends React.Component {
         this.state.businessType !== prevState.businessType ||
         this.state.driveThroughDriveUp !== prevState.driveThroughDriveUp ||
         this.state.takeout !== prevState.takeout ||
-        this.state.delivery !== prevState.delivery) {
+        this.state.delivery !== prevState.delivery ||
+        this.state.dineIn !== prevState.dineIn) {
       this.searchLocations()
     }
   }
@@ -125,6 +131,15 @@ export default class LocationList extends React.Component {
                   onClick={event => this.setState({delivery: event.target.checked})}
                 />
                 &nbsp;Delivery
+              </label>
+            </div>
+            <div key="dineIn">
+              <label className="form-check-label">
+                <input
+                  type="checkbox"
+                  onClick={event => this.setState({dineIn: event.target.checked})}
+                />
+                &nbsp;Dine In
               </label>
             </div>
           </div>

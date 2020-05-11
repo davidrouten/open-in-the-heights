@@ -16,7 +16,8 @@ class LocationSerializer < ActiveModel::Serializer
     {
       drive_through_drive_up: object.drive_through_drive_up.present? ? 'Drive through/Drive up' : nil,
       takeout: object.takeout.present? ? 'Takeout' : nil,
-      delivery: object.delivery.present? ? 'Delivery' : nil
+      delivery: object.delivery.present? ? 'Delivery' : nil,
+      dine_in: object.dine_in.present? ? 'Dine in' : nil
     }.compact.map { |key, value| value }.join(', ')
   end
 
