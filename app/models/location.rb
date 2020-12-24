@@ -4,11 +4,27 @@ class Location < ApplicationRecord
   scope :is_visible, -> { where(visible: true) }
   scope :is_open, -> { where(open: true) }
 
+  EST = 'Eastern Time (US & Canada)'
+
   belongs_to :created_by, class_name: 'User', optional: true
   belongs_to :updated_by, class_name: 'User', optional: true
 
   def self.unique_business_types
     Location.pluck(:business_type).uniq
+  end
+
+  def open_hours_today
+    day = DateTime.current.strftime('%A').downcase
+    self.send("hours_#{day}")
+  end
+
+  def currently_open?
+    return false if open_hours_today.blank? || open_hours_today.downcase == 'closed'
+    from, til = open_hours_today.split('-')
+    Time.parse(from).in_time_zone(EST) > Time.current.in_time_zone(EST) &&
+      Time.current.in_time_zone(EST) > Time.parse(til).in_time_zone(EST)
+  rescue
+    nil
   end
 
   private
